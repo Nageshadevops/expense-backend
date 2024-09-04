@@ -1,18 +1,6 @@
-name: Continuous integration - Reusable
-on: [workflow_call]
+name: Continuous integration
+on: [push]
 jobs:
-  CI_Steps:
-    runs-on: ubuntu-latest
-    steps:
-      - name: code checkout
-        uses: actions/checkout@v4
-      - run: echo ok
-        name: Code Build
-      - run: echo ok
-        name: Code Test
-      - run: echo ok
-        name: Code Review
-      - run: echo ok
-        name: Release Software
-
+  call-continuous-integration-reusable:
+    uses: Nageshadevops/github-reusable-workflow/.github/workflows/ci.yml@main
 
