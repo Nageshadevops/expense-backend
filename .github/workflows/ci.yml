@@ -1,0 +1,18 @@
+name: learn-github-actions
+on: [push]
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
+      - run: echo ok
+        name: Code Build
+      - run: echo ok
+        name: Code Test
+      - run: echo ok
+        name: Code Review
+      - run: echo ok
+        name: Release Code
+
+
