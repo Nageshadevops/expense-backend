@@ -13,6 +13,6 @@ jobs:
       - run: echo ok
         name: Code Review
       - run: echo ok
-        name: Release Code
+        name: Release software
 
 
