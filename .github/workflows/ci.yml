@@ -1,7 +1,7 @@
-name: learn-github-actions
-on: [push]
+name: learn-github-actions - Reusable
+on: [workflow_call]
 jobs:
-  job1:
+  CI_Steps:
     runs-on: ubuntu-latest
     steps:
       - name: code checkout
@@ -13,6 +13,6 @@ jobs:
       - run: echo ok
         name: Code Review
       - run: echo ok
-        name: Release software
+        name: Release Software
 
 
