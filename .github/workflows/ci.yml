@@ -1,4 +1,4 @@
-name: learn-github-actions - Reusable
+name: Continuous integration - Reusable
 on: [workflow_call]
 jobs:
   CI_Steps:
