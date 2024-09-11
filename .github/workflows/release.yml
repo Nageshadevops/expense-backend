@@ -7,7 +7,7 @@ jobs:
   call-release-reusable:
     uses: Nageshadevops/github-reusable-workflows/.github/workflows/release.yml@main
     with:
-      project_name: expense-frontend
+      project_name: expense-backend
       npm_install: true
       release_archive_file: "*.js package.json schema VERSION "
     secrets: inherit
