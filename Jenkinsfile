@@ -1,20 +1,23 @@
 node ( 'ci-server' ) {
-  stage('Lint Code') {
-    print 'ok'
-  }
-  stage('Run Unit tests') {
+  if (binding.hasVariable("$TAG_NAME")) {
+    stage('Build Code') {
       print 'ok'
     }
-  stage('Run Integration tests') {
+    stage('Release Software') {
       print 'ok'
     }
-  stage('Sonar Scan Code Review') {
+}   else {
+    stage('Lint Code') {
       print 'ok'
     }
-  stage('Build Code') {
+    stage('Run Unit tests') {
       print 'ok'
     }
-  stage('Release Software') {
+    stage('Run Integration tests') {
       print 'ok'
+    }
+    stage('Sonar Scan Code Review') {
+      print 'ok'
+    }
   }
 }
