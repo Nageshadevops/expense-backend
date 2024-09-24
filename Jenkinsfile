@@ -1,14 +1,14 @@
-node ( 'ci-server' ) {
-  if (binding.hasVariable("$TAG_NAME")) {
+node('ci-server') {
+  if (env.TAG_NAME ==~ '.*') {
     stage('Build Code') {
-      print 'ok'
+      print 'OK'
     }
     stage('Release Software') {
-      print 'ok'
+      print 'OK'
     }
-}   else {
+  } else {
     stage('Lint Code') {
-      print 'ok'
+      print 'OK'
     }
     if(env.BRANCH_NAME != 'main') {
       stage('Run Unit tests') {
@@ -19,7 +19,7 @@ node ( 'ci-server' ) {
       }
     }
     stage('Sonar Scan Code Review') {
-      print 'ok'
+      print 'OK'
     }
   }
 }
